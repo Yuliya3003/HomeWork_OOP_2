@@ -1,12 +1,11 @@
 package org.example;
 
 public class Human extends Alived{
-    private String name;
     private int maxDistance = 40000;
     private int maxHeight = 3;
 
     public Human(String name) {
-        this.name = name;
+        super(name);
     }
 
     @Override
@@ -34,7 +33,7 @@ public class Human extends Alived{
     @Override
     public String toString() {
         return "Human{" +
-                "name='" + name + '\'' +
+                "name='" + super.getName() + '\'' +
                 ", maxDistance=" + maxDistance +
                 ", maxHeight=" + maxHeight +
                 '}';

@@ -1,12 +1,12 @@
 package org.example;
 
 public class Robot extends NotAlived{
-    private String name;
+
     private int maxDistance = 20000;
     private int maxHeight = 1;
 
     public Robot(String name) {
-        this.name = name;
+        super(name);
     }
 
     @Override
@@ -34,7 +34,7 @@ public class Robot extends NotAlived{
     @Override
     public String toString() {
         return "Robot{" +
-                "name='" + name + '\'' +
+                "name='" + super.getName() + '\'' +
                 ", maxDistance=" + maxDistance +
                 ", maxHeight=" + maxHeight +
                 '}';

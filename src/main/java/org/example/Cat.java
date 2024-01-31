@@ -1,12 +1,12 @@
 package org.example;
 
 public class Cat extends Alived{
-    private String name;
+
     private int maxDistance = 50000;
     private int maxHeight = 10;
 
     public Cat(String name) {
-        this.name = name;
+        super(name);
     }
 
     @Override
@@ -34,7 +34,7 @@ public class Cat extends Alived{
     @Override
     public String toString() {
         return "Cat{" +
-                "name='" + name + '\'' +
+                "name='" + super.getName() + '\'' +
                 ", maxDistance=" + maxDistance +
                 ", maxHeight=" + maxHeight +
                 '}';

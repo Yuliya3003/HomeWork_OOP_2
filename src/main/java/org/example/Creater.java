@@ -1,6 +1,11 @@
 package org.example;
 
 public abstract class Creater {
+    private String name;
+
+    public Creater(String name) {
+        this.name = name;
+    }
 
     protected boolean crossObctacle(Obstacle obstacle){
         if (obstacle instanceof Treadmill){
@@ -16,4 +21,7 @@ public abstract class Creater {
     public abstract boolean jump(int height);
 
 
+    public String getName() {
+        return name;
+    }
 }
